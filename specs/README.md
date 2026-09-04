@@ -6,7 +6,7 @@ Las skills actualizan esta tabla; si la editas a mano, mantén el recuento real 
 
 | # | Spec | Estado | Depende de | RF | Marcadores | Notas |
 |---|---|---|---|---|---|---|
-| 001 | [{{nombre}}](001-{{nombre}}/spec.md) | borrador | — | 0 | 0 | |
+| 001 | [{{nombre}}](001-{{nombre}}/spec.md) | borrador | - | 0 | 0 | |
 
 ## Preguntas consolidadas para {{cliente}}
 1. 

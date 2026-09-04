@@ -1,4 +1,4 @@
-# ADR-0001 — Organización de repositorios; las specs como submódulo
+# ADR-0001 - Organización de repositorios; las specs como submódulo
 
 Estado: propuesta · Fecha: {{FECHA}}
 

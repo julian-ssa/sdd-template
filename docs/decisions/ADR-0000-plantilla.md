@@ -1,4 +1,4 @@
-# ADR-NNNN — <Título de la decisión>
+# ADR-NNNN - <Título de la decisión>
 
 Estado: propuesta | aceptada | pendiente | reemplazada por ADR-x · Fecha: AAAA-MM-DD
 

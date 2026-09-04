@@ -79,6 +79,6 @@ grep -rhoE "\]\((\.\.?/[^)#]+)" --include=*.md . | sed 's/](//' | sort -u | whil
 
 ## Convenciones de nombres
 
-- `specs/NNN-nombre-en-kebab-case/` — tres dígitos, la siguiente libre.
-- `docs/decisions/ADR-NNNN-tema.md` — cuatro dígitos. Estados: `propuesta`, `aceptada`, `pendiente`, `reemplazada por ADR-x`.
+- `specs/NNN-nombre-en-kebab-case/` - tres dígitos, la siguiente libre.
+- `docs/decisions/ADR-NNNN-tema.md` - cuatro dígitos. Estados: `propuesta`, `aceptada`, `pendiente`, `reemplazada por ADR-x`.
 - Ids: `RF-n` (funcional, por spec), `RNF-n` (no funcional, catálogo global), `H-n` (historia), `T-n` / `P-n` (tarea / prerrequisito).

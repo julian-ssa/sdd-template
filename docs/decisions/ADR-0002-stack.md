@@ -1,4 +1,4 @@
-# ADR-0002 — Stack de implementación
+# ADR-0002 - Stack de implementación
 
 Estado: **pendiente** · Fecha del borrador: {{FECHA}}
 

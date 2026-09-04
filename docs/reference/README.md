@@ -9,6 +9,6 @@ Reglas:
 - Sin datos personales reales: ejemplos ficticios o agregados.
 
 Archivos típicos:
-- `legacy-<sistema>.md` — mapa del sistema anterior: qué se mantiene, qué se elimina, deudas conocidas.
-- `computations.md` — catálogo de fórmulas con un ejemplo dorado para golden tests.
-- `<sistema>-contract.md` — qué entrega o consume un sistema externo, formato, códigos de error, qué no asumir.
+- `legacy-<sistema>.md` - mapa del sistema anterior: qué se mantiene, qué se elimina, deudas conocidas.
+- `computations.md` - catálogo de fórmulas con un ejemplo dorado para golden tests.
+- `<sistema>-contract.md` - qué entrega o consume un sistema externo, formato, códigos de error, qué no asumir.

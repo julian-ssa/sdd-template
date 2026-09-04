@@ -1,4 +1,4 @@
-# AGENTS.md — {{PROYECTO}}-specs
+# AGENTS.md - {{PROYECTO}}-specs
 
 Contexto canónico para cualquier agente de código o LLM (Claude Code, Codex, Cursor,
 Gemini CLI, opencode, Jules, xAI, chat plano…). `CLAUDE.md` solo contiene `@AGENTS.md`;
@@ -7,7 +7,7 @@ sola, pega su contenido al inicio de la sesión.
 
 ## Proyecto
 
-**{{PROYECTO}}** — {{DESCRIPCION}}.
+**{{PROYECTO}}** - {{DESCRIPCION}}.
 Visión, actores y alcance: `docs/product/overview.md`. Modelo de dominio: `docs/product/domain-model.md`.
 
 Este repositorio es la **fuente de verdad del producto**: constitución, specs, decisiones

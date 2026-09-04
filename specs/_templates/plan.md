@@ -1,4 +1,4 @@
-# Plan técnico — Spec NNN
+# Plan técnico - Spec NNN
 
 > Requiere: ADR-0002 (stack) decidido. Cubre: RF-1..RF-n de `spec.md`.
 

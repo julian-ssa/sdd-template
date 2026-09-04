@@ -6,7 +6,7 @@ Sirve para etiquetar tareas `[H]`/`[M]` en `tasks.md`: si un recurso dice
 
 | Recurso | Para qué | Propietario | ¿Agente puede usarlo? | Notas |
 |---|---|---|---|---|
-| GitHub — repos `{{PROYECTO}}-*` | Código, PRs, CI | {{persona}} | Con `gh` autenticado, sí | Crear remoto y proteger `main` es `[H]`. |
+| GitHub - repos `{{PROYECTO}}-*` | Código, PRs, CI | {{persona}} | Con `gh` autenticado, sí | Crear remoto y proteger `main` es `[H]`. |
 | {{Hosting}} | | | | |
 | {{Base de datos}} | | | Solo con credencial en `.env` | |
 | {{Proveedor de correo}} | | | No | |

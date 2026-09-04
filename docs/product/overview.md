@@ -1,4 +1,4 @@
-# {{PROYECTO}} — visión de producto
+# {{PROYECTO}} - visión de producto
 
 ## Qué es
 {{Dos o tres párrafos: qué hace, para quién, qué reemplaza o mejora.}}

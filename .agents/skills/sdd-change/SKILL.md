@@ -3,7 +3,7 @@ name: sdd-change
 description: Usa esta skill cuando aparezca un requisito nuevo, un cambio de alcance o una corrección sobre una spec ya aprobada. Actualiza primero la spec (RF en EARS, casos límite, sección Cambios), muestra el diff, y solo después propaga a plan y tareas. Nunca toca código.
 ---
 
-# sdd-change — el cambio empieza por la spec
+# sdd-change - el cambio empieza por la spec
 
 Argumentos: `NNN` y la descripción del cambio.
 

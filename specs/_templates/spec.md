@@ -1,4 +1,4 @@
-# Spec NNN — <Nombre de la funcionalidad>
+# Spec NNN - <Nombre de la funcionalidad>
 
 > Estado: borrador | en clarificación | aprobada | implementada · Depende de: <specs> · Marcadores abiertos: <n>
 
@@ -38,7 +38,7 @@
 <Ej.: todos los RF con test en verde + demo manual del flujo principal + marcadores a cero.>
 
 ## Dudas abiertas
-- [NECESITA ACLARACIÓN: <pregunta concreta>] — quién responde: <persona/organización>.
+- [NECESITA ACLARACIÓN: <pregunta concreta>] - quién responde: <persona/organización>.
 
 ## Cambios
 <Historial de cambios de requisitos tras la aprobación: fecha, RF afectados, motivo.>

@@ -1,4 +1,4 @@
-# Constitución — {{PROYECTO}}
+# Constitución - {{PROYECTO}}
 
 Principios innegociables. Toda spec, plan, tarea y línea de código debe cumplirlos.
 Cada principio termina con cómo se verifica, para que `sdd-validate` pueda comprobarlo.

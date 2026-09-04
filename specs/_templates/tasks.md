@@ -1,4 +1,4 @@
-# Tareas — Spec NNN
+# Tareas - Spec NNN
 
 > Leyenda: `[A]` la hace el agente · `[H]` la hace un humano · `[M]` mixta (el agente necesita algo de un humano: credencial, cuenta, acceso, decisión).
 > Cada tarea: < 30 min, ordenada por dependencia, con los RF que cubre y una línea "Hecho cuando:" verificable.
@@ -6,7 +6,7 @@
 
 ## Prerrequisitos humanos
 <Todo lo que debe existir ANTES de empezar. Sin esto el trabajo se para.>
-- [ ] P1. [H] <credencial / cuenta / acceso / decisión> — quién: <persona> — necesario para: T?, T?.
+- [ ] P1. [H] <credencial / cuenta / acceso / decisión> - quién: <persona> - necesario para: T?, T?.
 
 ## Tareas
 - [ ] T1. [A] <qué>. (RF-x) Hecho cuando: <condición verificable>.
