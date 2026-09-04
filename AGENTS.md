@@ -7,7 +7,7 @@ sola, pega su contenido al inicio de la sesión.
 
 ## Proyecto
 
-**{{PROYECTO}}** — {{DESCRIPCIÓN EN 2–3 FRASES: qué es, para quién, qué problema resuelve}}.
+**{{PROYECTO}}** — {{DESCRIPCION}}.
 Visión, actores y alcance: `docs/product/overview.md`. Modelo de dominio: `docs/product/domain-model.md`.
 
 Este repositorio es la **fuente de verdad del producto**: constitución, specs, decisiones
