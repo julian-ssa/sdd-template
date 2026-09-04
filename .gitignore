@@ -1,0 +1,24 @@
+# Secretos y entorno local
+.env
+.env.*
+!.env.example
+
+# Datos con información personal: nunca se versionan
+*.xlsx
+*.xls
+*.csv
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+~$*
+.idea/
+.vscode/
+
+# Entornos y dependencias (por si algún script auxiliar vive aquí)
+.venv/
+venv/
+__pycache__/
+node_modules/
+
+# NOTA: CLAUDE.md, AGENTS.md, .agents/, .claude/ y .opencode/ SÍ se versionan.

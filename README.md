@@ -1,0 +1,50 @@
+# sdd-template
+
+Plantilla para arrancar cualquier proyecto de software a medida con **Spec-Driven
+Development (SDD)** y agentes de IA intercambiables (Claude Code, Codex, Cursor,
+opencode, Gemini CLI, chat plano…). Nace del repo `cuadranta-specs` y del método de
+Brais Moure (`hello-sdd`).
+
+Lo que trae:
+
+| Pieza | Para qué |
+|---|---|
+| `AGENTS.md` (+ `CLAUDE.md` = `@AGENTS.md`) | Contexto canónico para cualquier agente, con placeholders `{{…}}`. |
+| `docs/constitution.md` | Plantilla de principios verificables, cada uno con "Se verifica". |
+| `docs/sdd/` | El método en una página, prompts por fase y registro de recursos externos. |
+| `docs/product/` | Plantillas de visión, glosario bilingüe, modelo de dominio, RNF y roadmap. |
+| `docs/reference/` | Dónde documentar sistemas previos y contratos externos (con el commit leído). |
+| `docs/decisions/` | Plantilla de ADR y los dos ADR que todo proyecto necesita (repos, stack). |
+| `specs/_templates/` | Plantillas de `spec.md` (EARS), `plan.md` y `tasks.md` (con `[A]/[H]/[M]`). |
+| `.agents/skills/` | Cinco skills SDD canónicas; `.claude/skills` y `.opencode/skill` son enlaces. |
+| `new-project.sh` | Crea un repo nuevo a partir de esta plantilla y sustituye los placeholders. |
+
+## Crear un proyecto nuevo
+
+```bash
+./new-project.sh <nombre-kebab> <ruta-destino> ["Descripción corta"]
+# ejemplo:
+./new-project.sh gestor-proyectos ~/Coding/clients/acme "Herramienta de gestión de proyectos para equipos pequeños"
+```
+
+Crea `<ruta-destino>/<nombre>-specs/` con git inicializado y un primer commit. Después:
+
+1. Rellena los `{{…}}` que queden (`grep -rn "{{" .`).
+2. Escribe la constitución con el prompt de `docs/sdd/prompts.md` (o edita la plantilla).
+3. Rellena glosario y modelo de dominio antes de la primera spec.
+4. `sdd-spec 001` para la primera funcionalidad. Plan y tareas solo cuando `ADR-0002-stack.md` esté decidido.
+
+## Cómo lo consumen los repos de código
+
+Cada repo de aplicación añade el repo de specs como submódulo en `sdd/` y enlaza las skills:
+
+```bash
+git submodule add <url-del-repo-specs> sdd
+mkdir -p .agents && ln -s ../sdd/.agents/skills .agents/skills
+```
+
+## Mantener la plantilla
+
+Las mejoras al método (skills, plantillas, checklist) se hacen aquí y se copian a los
+proyectos que lo necesiten. Las skills tienen **una sola copia** en `.agents/skills/`; el
+resto son enlaces.
