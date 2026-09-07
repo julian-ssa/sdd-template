@@ -35,7 +35,7 @@ plano sin comandos propietarios, así que sirven de tres formas:
 | Claude Code | `.claude/skills/` enlaza a las canónicas → `/sdd-spec 003`, `/sdd-plan 003`… |
 | opencode | `.opencode/skill/` enlaza a las canónicas → misma invocación. |
 | Codex, Cursor, Gemini CLI, Jules, otros con soporte de skills | Apunta la herramienta a `.agents/skills/` (o crea un enlace simbólico a esa carpeta en la ruta que espere). |
-| Cualquier LLM sin skills (chat web, xAI, API propia) | Pega `AGENTS.md`, `docs/constitution.md` y el `SKILL.md` de la fase, o el prompt corto de `docs/sdd/prompts.md`. |
+| Cualquier LLM sin skills (chat web, xAI, API propia) | Pega [`AGENTS.md`](../../AGENTS.md), [`docs/constitution.md`](../constitution.md) y el `SKILL.md` de la fase, o el prompt corto de [`docs/sdd/prompts.md`](prompts.md). |
 
 Adaptadores nuevos: un enlace simbólico por herramienta, añadido aquí. Nunca se
 copia el contenido de una skill: `SKILL.md` en `.agents/skills/` es la única fuente.
@@ -50,10 +50,10 @@ copia el contenido de una skill: `SKILL.md` en `.agents/skills/` es la única fu
 
 | Skill | Fase(s) | Entrada | Salida |
 |---|---|---|---|
-| `sdd-spec` | Spec + clarificación | idea o `NNN` existente; `--aclarar` para el pase de QA | `spec.md`, `specs/README.md` |
-| `sdd-plan` | Plan + tareas | `NNN` con spec aprobada; ADR-0002 decidido | `plan.md`, `tasks.md` |
+| `sdd-spec` | Spec + clarificación | idea o `NNN` existente; `--aclarar` para el pase de QA | `spec.md`, [`specs/README.md`](../../specs/README.md) |
+| `sdd-plan` | Plan + tareas | `NNN` con spec aprobada; [ADR-0002](../decisions/ADR-0002-stack.md) decidido | `plan.md`, `tasks.md` |
 | `sdd-implement` | Implementación | `NNN Tn` | código + tests; `tasks.md` marcada |
-| `sdd-validate` | Validación | `NNN` | informe RF → test → resultado; estado en `specs/README.md` |
+| `sdd-validate` | Validación | `NNN` | informe RF → test → resultado; estado en [`specs/README.md`](../../specs/README.md) |
 | `sdd-change` | Cambio | `NNN` + nuevo requisito | spec actualizada (diff), luego plan/tareas |
 
 ## Checklist de calidad (mecánica)
@@ -73,8 +73,8 @@ grep -rniE "postgres|react|next\.js|prisma|express|nest|fastapi|python|streamlit
 grep -rnE "<patrón de identificadores o teléfonos reales del proyecto>" docs specs .agents || true
 # Marcadores por spec (debe coincidir con specs/README.md)
 grep -c "NECESITA ACLARACIÓN" specs/[0-9]*/spec.md
-# Enlaces relativos rotos
-grep -rhoE "\]\((\.\.?/[^)#]+)" --include=*.md . | sed 's/](//' | sort -u | while read p; do [ -e "$p" ] || echo "ENLACE ROTO: $p"; done
+# Enlaces: rotos y referencias a archivos sin enlace (`--fix` los convierte en enlaces relativos)
+python3 tools/links.py --check
 ```
 
 ## Convenciones de nombres

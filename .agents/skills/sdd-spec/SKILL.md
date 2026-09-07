@@ -13,8 +13,8 @@ Argumentos: `NNN` (número de spec existente o el siguiente libre) y, opcionalme
 
 ## Antes de empezar
 
-1. Lee `AGENTS.md`, `docs/constitution.md`, `docs/product/glossary.md` y
-   `docs/product/requisitos-transversales.md`.
+1. Lee [`AGENTS.md`](../../../AGENTS.md), [`docs/constitution.md`](../../../docs/constitution.md), [`docs/product/glossary.md`](../../../docs/product/glossary.md) y
+   [`docs/product/requisitos-transversales.md`](../../../docs/product/requisitos-transversales.md).
 2. Lee las specs previas de `specs/` para respetar convenciones y no contradecir lo acordado.
 3. Si el dominio depende de un sistema externo, lee su contrato en `docs/reference/`.
 
@@ -27,14 +27,14 @@ Argumentos: `NNN` (número de spec existente o el siguiente libre) y, opcionalme
    cambie lo que hay que construir; descarta las de respuesta obvia.
 2. **Número y carpeta.** Usa `specs/NNN-<nombre-en-kebab-case>/spec.md` con el
    siguiente número libre de tres dígitos.
-3. **Redacta** con `specs/_templates/spec.md` sin saltarte secciones. Criterios de
+3. **Redacta** con [`specs/_templates/spec.md`](../../../specs/_templates/spec.md) sin saltarte secciones. Criterios de
    aceptación **siempre en EARS**, numerados RF-1, RF-2… sin reiniciar entre grupos.
    Cada requisito debe ser verificable: si no se te ocurre cómo comprobarlo, está
    mal escrito. Usa solo términos del glosario.
 4. **Marca lo que no sepas** como `[NECESITA ACLARACIÓN: pregunta concreta]` y
    lístalo en "Dudas abiertas" con quién debe responder. Nunca rellenes un hueco
    inventando.
-5. **Actualiza `specs/README.md`**: fila de la spec, estado, dependencias y número de marcadores.
+5. **Actualiza [`specs/README.md`](../../../specs/README.md)**: fila de la spec, estado, dependencias y número de marcadores.
 6. **Pide aprobación explícita.** No pases al plan ni escribas código sin ella.
 
 ## Modo clarificación (`--aclarar`)
@@ -45,7 +45,7 @@ No reescribas la spec de entrada. Primero **detecta y lista**, numerado, en cinc
 Después, para cada marcador `[NECESITA ACLARACIÓN]`, pregunta al usuario de una en
 una. Con cada respuesta: edita el RF afectado, elimina el marcador, anota la
 decisión en "Cambios" si la spec ya estaba aprobada. Termina actualizando el
-recuento de marcadores en la cabecera de la spec y en `specs/README.md`.
+recuento de marcadores en la cabecera de la spec y en [`specs/README.md`](../../../specs/README.md).
 
 ## Reglas
 
@@ -79,5 +79,5 @@ Mal escrito:
 
 ## Al terminar
 
-Ejecuta la "Checklist de calidad" de `docs/sdd/README.md` sobre la spec tocada y
+Ejecuta la "Checklist de calidad" de [`docs/sdd/README.md`](../../../docs/sdd/README.md) sobre la spec tocada y
 resume: archivo, número de RF, marcadores abiertos y qué necesita el humano.

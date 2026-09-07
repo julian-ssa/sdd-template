@@ -23,5 +23,5 @@ Argumento: `NNN`. Se ejecuta desde el repo de código con este repo en `sdd/`.
 
 ## Al terminar
 
-- Actualiza `specs/README.md`: estado (`implementada` solo con veredicto `cumplida`).
+- Actualiza [`specs/README.md`](../../../specs/README.md): estado (`implementada` solo con veredicto `cumplida`).
 - No corrijas código en esta skill. Si hay fallos, propón la tarea o el `sdd-change` correspondiente.

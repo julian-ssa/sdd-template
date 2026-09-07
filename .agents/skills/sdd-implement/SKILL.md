@@ -11,11 +11,11 @@ tiene este repo de specs como submódulo en `sdd/`.
 ## Antes de empezar
 
 1. Lee `sdd/AGENTS.md`, `sdd/docs/constitution.md`, `sdd/specs/NNN-*/spec.md`,
-   `plan.md` y `tasks.md`. Lee el `AGENTS.md` del repo de código (comandos de test, lint, estructura).
+   `plan.md` y `tasks.md`. Lee el [`AGENTS.md`](../../../AGENTS.md) del repo de código (comandos de test, lint, estructura).
 2. Comprueba que todas las tareas de las que depende Tn están marcadas. Si no, párate y dilo.
 3. Mira la etiqueta de Tn:
    - `[H]`: **no la hagas**. Explica qué debe hacer la persona, con qué recurso de
-     `docs/sdd/recursos-externos.md`, y párate.
+     [`docs/sdd/recursos-externos.md`](../../../docs/sdd/recursos-externos.md), y párate.
    - `[M]`: haz solo la parte del agente. Al terminar, lista con precisión qué falta
      de la persona (variable, dato, decisión) y **no marques la tarea**.
    - `[A]`: continúa.
@@ -29,7 +29,7 @@ tiene este repo de specs como submódulo en `sdd/`.
    propón `sdd-change`; no improvises.
 3. Respeta la constitución: dominio sin interfaz, dinero y fechas tipados, `as_of`
    explícito, alcance por inquilino u organización en toda consulta si aplica, sin datos personales en logs.
-4. Ejecuta la suite completa con el comando del `AGENTS.md` del repo de código y
+4. Ejecuta la suite completa con el comando del [`AGENTS.md`](../../../AGENTS.md) del repo de código y
    muestra el resultado literal.
 
 ## Al terminar

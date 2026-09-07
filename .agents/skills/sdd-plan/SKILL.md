@@ -1,6 +1,6 @@
 ---
 name: sdd-plan
-description: Usa esta skill cuando el usuario pida el plan técnico o las tareas de una spec aprobada. Genera specs/NNN-nombre/plan.md y tasks.md en un solo pase, etiquetando cada tarea como [A] agente, [H] humano o [M] mixta, y escribiendo primero los prerrequisitos humanos. Se niega a ejecutarse si la decisión de stack (ADR-0002) sigue pendiente.
+description: Usa esta skill cuando el usuario pida el plan técnico o las tareas de una spec aprobada. Genera specs/NNN-nombre/plan.md y tasks.md en un solo pase, etiquetando cada tarea como [A] agente, [H] humano o [M] mixta, y escribiendo primero los prerrequisitos humanos. Se niega a ejecutarse si la decisión de stack ([ADR-0002](../../../docs/decisions/ADR-0002-stack.md)) sigue pendiente.
 ---
 
 # sdd-plan - plan técnico y tareas
@@ -9,17 +9,17 @@ Argumento: `NNN` (spec con estado `aprobada` y cero marcadores abiertos).
 
 ## Antes de empezar
 
-1. Lee `AGENTS.md`, `docs/constitution.md` y `docs/decisions/ADR-0002-stack.md`.
-   **Si ADR-0002 está `pendiente`, párate** y dilo: sin stack no hay plan.
+1. Lee [`AGENTS.md`](../../../AGENTS.md), [`docs/constitution.md`](../../../docs/constitution.md) y [`docs/decisions/ADR-0002-stack.md`](../../../docs/decisions/ADR-0002-stack.md).
+   **Si [ADR-0002](../../../docs/decisions/ADR-0002-stack.md) está `pendiente`, párate** y dilo: sin stack no hay plan.
 2. Lee `specs/NNN-*/spec.md`. Si tiene marcadores `[NECESITA ACLARACIÓN]` o no está
    aprobada, párate y propón ejecutar `sdd-spec NNN --aclarar` primero.
-3. Lee `docs/product/domain-model.md`, `docs/reference/computations.md` (si hay
-   cálculos), los contratos externos que la spec cite y `docs/sdd/recursos-externos.md`.
+3. Lee [`docs/product/domain-model.md`](../../../docs/product/domain-model.md), `docs/reference/computations.md` (si hay
+   cálculos), los contratos externos que la spec cite y [`docs/sdd/recursos-externos.md`](../../../docs/sdd/recursos-externos.md).
 4. Lee los `plan.md` de las specs de las que esta depende para reutilizar módulos y no duplicar.
 
 ## Plan (`plan.md`)
 
-Usa `specs/_templates/plan.md`. Sin código. Contiene:
+Usa [`specs/_templates/plan.md`](../../../specs/_templates/plan.md). Sin código. Contiene:
 
 - Estructura de módulos con los RF que cubre cada uno. Respeta "Dominio sin interfaz".
 - Modelo de datos con alcance por organización en toda entidad de negocio, claves
@@ -33,9 +33,9 @@ Usa `specs/_templates/plan.md`. Sin código. Contiene:
 
 ## Tareas (`tasks.md`)
 
-Usa `specs/_templates/tasks.md`.
+Usa [`specs/_templates/tasks.md`](../../../specs/_templates/tasks.md).
 
-1. **Primero "Prerrequisitos humanos"**: recorre `docs/sdd/recursos-externos.md` y
+1. **Primero "Prerrequisitos humanos"**: recorre [`docs/sdd/recursos-externos.md`](../../../docs/sdd/recursos-externos.md) y
    la spec; todo acceso, credencial, cuenta, dato de prueba o decisión que no
    exista aún es un `P-n [H]` con responsable y las tareas que bloquea.
 2. Divide el plan en tareas de **menos de 30 minutos**, en orden de dependencia,
@@ -50,5 +50,5 @@ Usa `specs/_templates/tasks.md`.
 
 ## Al terminar
 
-- Actualiza `specs/README.md` (estado `planificada`, número de tareas y de `[H]`/`[M]`).
+- Actualiza [`specs/README.md`](../../../specs/README.md) (estado `planificada`, número de tareas y de `[H]`/`[M]`).
 - Pide aprobación explícita antes de implementar nada.

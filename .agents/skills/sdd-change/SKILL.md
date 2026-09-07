@@ -9,7 +9,7 @@ Argumentos: `NNN` y la descripción del cambio.
 
 ## Proceso
 
-1. Lee `AGENTS.md`, `docs/constitution.md` y `specs/NNN-*/spec.md`.
+1. Lee [`AGENTS.md`](../../../AGENTS.md), [`docs/constitution.md`](../../../docs/constitution.md) y `specs/NNN-*/spec.md`.
 2. Si el cambio afecta al modelo de dominio, a la tenencia multi-organización o a la
    visibilidad por rol, **primero** propone un ADR nuevo en `docs/decisions/` y
    espera aprobación.
@@ -22,7 +22,7 @@ Argumentos: `NNN` y la descripción del cambio.
 4. **Muestra el diff** de la spec y pide aprobación. No sigas sin ella.
 5. Con aprobación: actualiza `plan.md` (módulos, cobertura RF) y `tasks.md` (tareas
    nuevas al final, etiquetadas `[A]/[H]/[M]`, sin reordenar las hechas).
-6. Actualiza `specs/README.md` (estado vuelve a `aprobada`/`planificada`; marcadores).
+6. Actualiza [`specs/README.md`](../../../specs/README.md) (estado vuelve a `aprobada`/`planificada`; marcadores).
 
 ## Reglas
 

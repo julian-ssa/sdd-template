@@ -19,7 +19,7 @@
 | 001 | | |
 
 ## Fuera del MVP
-{{Enlaza cada exclusión a `roadmap.md`.}}
+{{Enlaza cada exclusión a [`roadmap.md`](roadmap.md).}}
 
 ## Principios de producto
 - {{Ej.: cada cifra tiene fórmula; nada se pierde en una importación; el usuario entiende lo que ve.}}

@@ -9,8 +9,8 @@ Lo que trae:
 
 | Pieza | Para qué |
 |---|---|
-| `AGENTS.md` (+ `CLAUDE.md` = `@AGENTS.md`) | Contexto canónico para cualquier agente, con placeholders `{{…}}`. |
-| `docs/constitution.md` | Plantilla de principios verificables, cada uno con "Se verifica". |
+| [`AGENTS.md`](AGENTS.md) (+ [`CLAUDE.md`](CLAUDE.md) = `@AGENTS.md`) | Contexto canónico para cualquier agente, con placeholders `{{…}}`. |
+| [`docs/constitution.md`](docs/constitution.md) | Plantilla de principios verificables, cada uno con "Se verifica". |
 | `docs/sdd/` | El método en una página, prompts por fase y registro de recursos externos. |
 | `docs/product/` | Plantillas de visión, glosario bilingüe, modelo de dominio, RNF y roadmap. |
 | `docs/reference/` | Dónde documentar sistemas previos y contratos externos (con el commit leído). |
@@ -30,9 +30,9 @@ Lo que trae:
 Crea `<ruta-destino>/<nombre>-specs/` con git inicializado y un primer commit. Después:
 
 1. Rellena los `{{…}}` que queden (`grep -rn "{{" .`).
-2. Escribe la constitución con el prompt de `docs/sdd/prompts.md` (o edita la plantilla).
+2. Escribe la constitución con el prompt de [`docs/sdd/prompts.md`](docs/sdd/prompts.md) (o edita la plantilla).
 3. Rellena glosario y modelo de dominio antes de la primera spec.
-4. `sdd-spec 001` para la primera funcionalidad. Plan y tareas solo cuando `ADR-0002-stack.md` esté decidido.
+4. `sdd-spec 001` para la primera funcionalidad. Plan y tareas solo cuando [`ADR-0002-stack.md`](docs/decisions/ADR-0002-stack.md) esté decidido.
 
 ## Cómo lo consumen los repos de código
 

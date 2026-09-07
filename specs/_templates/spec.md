@@ -22,7 +22,7 @@
 - RF-5: EL SISTEMA <comportamiento permanente>.
 
 ## Requisitos no funcionales aplicables
-<Solo ids del catálogo `docs/product/requisitos-transversales.md`, p. ej. RNF-1, RNF-4. Añade aquí únicamente los específicos de esta spec.>
+<Solo ids del catálogo [`docs/product/requisitos-transversales.md`](../../docs/product/requisitos-transversales.md), p. ej. RNF-1, RNF-4. Añade aquí únicamente los específicos de esta spec.>
 
 ## Casos límite
 <Vacíos, duplicados, datos corruptos, límites, concurrencia, permisos. Cada uno apunta al RF que lo cubre.>
@@ -32,7 +32,7 @@
 <Lo que explícitamente NO se hace en esta iteración y dónde queda registrado (roadmap, otra spec).>
 
 ## Dependencias
-<Specs, contratos externos (`docs/reference/*-contract.md`) y recursos externos (`docs/sdd/recursos-externos.md`) de los que depende.>
+<Specs, contratos externos (`docs/reference/*-contract.md`) y recursos externos ([`docs/sdd/recursos-externos.md`](../../docs/sdd/recursos-externos.md)) de los que depende.>
 
 ## Criterios de finalización
 <Ej.: todos los RF con test en verde + demo manual del flujo principal + marcadores a cero.>

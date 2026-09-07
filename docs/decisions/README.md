@@ -1,7 +1,7 @@
 # Decisiones de arquitectura (ADR)
 
 Una decisión por archivo: `ADR-NNNN-tema.md`. Estados: `propuesta`, `aceptada`,
-`pendiente`, `reemplazada por ADR-x`. Formato en `ADR-0000-plantilla.md`.
+`pendiente`, `reemplazada por ADR-x`. Formato en [`ADR-0000-plantilla.md`](ADR-0000-plantilla.md).
 
 | ADR | Tema | Estado |
 |---|---|---|

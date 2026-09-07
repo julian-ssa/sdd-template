@@ -1,6 +1,6 @@
 # Plan técnico - Spec NNN
 
-> Requiere: ADR-0002 (stack) decidido. Cubre: RF-1..RF-n de `spec.md`.
+> Requiere: [ADR-0002](../../docs/decisions/ADR-0002-stack.md) (stack) decidido. Cubre: RF-1..RF-n de [`spec.md`](spec.md).
 
 ## Estructura de módulos
 <Módulos/paquetes/servicios y qué RF cubre cada uno. Respeta "Dominio sin interfaz" (constitución).>

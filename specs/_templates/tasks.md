@@ -2,7 +2,7 @@
 
 > Leyenda: `[A]` la hace el agente · `[H]` la hace un humano · `[M]` mixta (el agente necesita algo de un humano: credencial, cuenta, acceso, decisión).
 > Cada tarea: < 30 min, ordenada por dependencia, con los RF que cubre y una línea "Hecho cuando:" verificable.
-> Consulta `docs/sdd/recursos-externos.md` antes de etiquetar: si una tarea toca un recurso externo, es `[H]` o `[M]`.
+> Consulta [`docs/sdd/recursos-externos.md`](../../docs/sdd/recursos-externos.md) antes de etiquetar: si una tarea toca un recurso externo, es `[H]` o `[M]`.
 
 ## Prerrequisitos humanos
 <Todo lo que debe existir ANTES de empezar. Sin esto el trabajo se para.>
