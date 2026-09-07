@@ -5,13 +5,13 @@ description: Usa esta skill cuando el usuario pida implementar una tarea concret
 
 # sdd-implement - una tarea, tests primero
 
-Argumentos: `NNN Tn` (spec y tarea). Se ejecuta desde el **repo de código**, que
-tiene este repo de specs como submódulo en `sdd/`.
+Argumentos: `NNN Tn` (spec y tarea). Se ejecuta desde el **repo de código**, con el
+repo de specs clonado como hermano en `../<proyecto>-specs` (si no está, clónalo ahí antes).
 
 ## Antes de empezar
 
-1. Lee `sdd/AGENTS.md`, `sdd/docs/constitution.md`, `sdd/specs/NNN-*/spec.md`,
-   `plan.md` y `tasks.md`. Lee el [`AGENTS.md`](../../../AGENTS.md) del repo de código (comandos de test, lint, estructura).
+1. Lee en `../<proyecto>-specs`: `AGENTS.md`, `docs/constitution.md`, `specs/NNN-*/spec.md`,
+   `plan.md` y `tasks.md`. Lee el `AGENTS.md` del repo de código (comandos de test, lint, estructura).
 2. Comprueba que todas las tareas de las que depende Tn están marcadas. Si no, párate y dilo.
 3. Mira la etiqueta de Tn:
    - `[H]`: **no la hagas**. Explica qué debe hacer la persona, con qué recurso de

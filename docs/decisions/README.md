@@ -5,5 +5,5 @@ Una decisión por archivo: `ADR-NNNN-tema.md`. Estados: `propuesta`, `aceptada`,
 
 | ADR | Tema | Estado |
 |---|---|---|
-| [0001](ADR-0001-repositorios.md) | Organización de repositorios; specs como submódulo | propuesta |
+| [0001](ADR-0001-repositorios.md) | Organización de repositorios; specs como repo hermano en el workspace | propuesta |
 | [0002](ADR-0002-stack.md) | Stack de implementación | **pendiente** |

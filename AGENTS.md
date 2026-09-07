@@ -18,8 +18,8 @@ y documentación. No contiene código de aplicación.
 - Fase: **solo specs**. Stack de implementación **pendiente** → [`docs/decisions/ADR-0002-stack.md`](docs/decisions/ADR-0002-stack.md).
 - Prohibido crear `apps/`, `packages/`, `src/` o cualquier código aquí.
 - Prohibido ejecutar la fase de plan (`sdd-plan`) mientras [ADR-0002](docs/decisions/ADR-0002-stack.md) esté `pendiente`.
-- Tras la decisión de stack se crearán los repos de código (ver [ADR-0001](docs/decisions/ADR-0001-repositorios.md)); cada uno tendrá
-  este repo como submódulo en `sdd/`.
+- Tras la decisión de stack se crearán los repos de código como hermanos de este en el
+  workspace, sin submódulos (ver [ADR-0001](docs/decisions/ADR-0001-repositorios.md)); su `AGENTS.md` apunta a `../{{PROYECTO}}-specs`.
 
 ## Mapa del workspace y de los repos
 

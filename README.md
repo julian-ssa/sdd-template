@@ -36,12 +36,17 @@ Crea `<ruta-destino>/<nombre>-specs/` con git inicializado y un primer commit. D
 
 ## Cómo lo consumen los repos de código
 
-Cada repo de aplicación añade el repo de specs como submódulo en `sdd/` y enlaza las skills:
+Los repos de código se clonan como hermanos del repo de specs en la misma carpeta (el
+workspace), sin submódulos, y enlazan las skills:
 
 ```bash
-git submodule add <url-del-repo-specs> sdd
-mkdir -p .agents && ln -s ../sdd/.agents/skills .agents/skills
+cd <workspace>
+git clone <url-del-repo-specs>
+git clone <url-del-repo-de-codigo>
+cd <repo-de-codigo> && mkdir -p .agents && ln -s ../../<proyecto>-specs/.agents/skills .agents/skills
 ```
+
+El `AGENTS.md` de cada repo de código dice que las specs están en `../<proyecto>-specs`.
 
 ## Mantener la plantilla
 

@@ -5,11 +5,12 @@ description: Usa esta skill cuando el usuario pida validar, auditar o dar el ver
 
 # sdd-validate - veredicto RF por RF
 
-Argumento: `NNN`. Se ejecuta desde el repo de código con este repo en `sdd/`.
+Argumento: `NNN`. Se ejecuta desde el repo de código con el repo de specs clonado como
+hermano en `../<proyecto>-specs`.
 
 ## Proceso
 
-1. Lee `sdd/docs/constitution.md`, `sdd/specs/NNN-*/spec.md`, `plan.md` y `tasks.md`.
+1. Lee en `../<proyecto>-specs`: `docs/constitution.md`, `specs/NNN-*/spec.md`, `plan.md` y `tasks.md`.
 2. Ejecuta la suite completa y guarda la salida.
 3. Para **cada RF**, en orden: qué test lo cubre (archivo y nombre; debe contener el
    id `RF-n`), resultado (verde / rojo / sin test). Un RF sin test es un fallo, no
