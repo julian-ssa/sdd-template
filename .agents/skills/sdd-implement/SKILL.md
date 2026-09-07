@@ -10,8 +10,8 @@ repo de specs clonado como hermano en `../<proyecto>-specs` (si no está, clóna
 
 ## Antes de empezar
 
-1. Lee en `../<proyecto>-specs`: `AGENTS.md`, `docs/constitution.md`, `specs/NNN-*/spec.md`,
-   `plan.md` y `tasks.md`. Lee el `AGENTS.md` del repo de código (comandos de test, lint, estructura).
+1. Lee en `../<proyecto>-specs`: `AGENTS.md`, [`docs/constitution.md`](../../../docs/constitution.md), `specs/NNN-*/spec.md`,
+   `plan.md` y `tasks.md`. Lee el `AGENTS.md` del repo de código, por ejemplo `<repo-de-codigo>/AGENTS.md` (comandos de test, lint, estructura).
 2. Comprueba que todas las tareas de las que depende Tn están marcadas. Si no, párate y dilo.
 3. Mira la etiqueta de Tn:
    - `[H]`: **no la hagas**. Explica qué debe hacer la persona, con qué recurso de
@@ -29,7 +29,7 @@ repo de specs clonado como hermano en `../<proyecto>-specs` (si no está, clóna
    propón `sdd-change`; no improvises.
 3. Respeta la constitución: dominio sin interfaz, dinero y fechas tipados, `as_of`
    explícito, alcance por inquilino u organización en toda consulta si aplica, sin datos personales en logs.
-4. Ejecuta la suite completa con el comando del [`AGENTS.md`](../../../AGENTS.md) del repo de código y
+4. Ejecuta la suite completa con el comando del `AGENTS.md` del repo de código y
    muestra el resultado literal.
 
 ## Al terminar

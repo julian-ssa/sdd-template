@@ -46,7 +46,7 @@ git clone <url-del-repo-de-codigo>
 cd <repo-de-codigo> && mkdir -p .agents && ln -s ../../<proyecto>-specs/.agents/skills .agents/skills
 ```
 
-El `AGENTS.md` de cada repo de código dice que las specs están en `../<proyecto>-specs`.
+El archivo `<repo-de-codigo>/AGENTS.md` (uno por repo de código) dice que las specs están en `../<proyecto>-specs`.
 
 ## Mantener la plantilla
 

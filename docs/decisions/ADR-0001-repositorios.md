@@ -18,7 +18,7 @@ Estado: propuesta · Fecha: {{FECHA}}
 - `{{PROYECTO}}-specs` es la fuente de verdad del producto (constitución, specs, ADRs,
   docs, skills). No contiene código y **no es dependencia de construcción ni de
   despliegue** de ningún repo de código.
-- Cada repo de código lleva un `AGENTS.md` propio que dice "las specs están en
+- Cada repo de código lleva un `AGENTS.md` propio (por ejemplo `{{PROYECTO}}-api/AGENTS.md`) que dice "las specs están en
   `../{{PROYECTO}}-specs`; si la carpeta no existe, clónala ahí", y enlaza las skills con
   `.agents/skills -> ../../{{PROYECTO}}-specs/.agents/skills` (enlace simbólico relativo).
 - Trazabilidad: `plan.md` y `tasks.md` viven en el repo de specs; cada tarea marcada anota
@@ -31,7 +31,7 @@ Estado: propuesta · Fecha: {{FECHA}}
 - Despliegue simple: cada repo de código se construye solo, sin credenciales para otro repo.
 - Cambiar una spec es un commit en el repo de specs, sin tocar los repos de código; la
   referencia es siempre `main` del repo de specs y la trazabilidad se lleva en `tasks.md`.
-- Un agente que trabaje en un repo de código necesita el hermano clonado; su `AGENTS.md` lo dice.
+- Un agente que trabaje en un repo de código necesita el hermano clonado; el `AGENTS.md` de ese repo lo dice.
 
 ## Alternativas descartadas
 - **Monorepo**: {{motivo}}.

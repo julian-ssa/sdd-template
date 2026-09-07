@@ -44,7 +44,7 @@ def rel(target, src):
 
 def resolve(path, src):
     """Ruta desde la raíz, desde la carpeta del archivo, o nombre único en el repo."""
-    if os.path.isfile(path):
+    if os.path.isfile(path) and ("/" in path or path not in GENERIC or os.path.dirname(src) == ""):
         return os.path.normpath(path)
     if "/" not in path:
         same = os.path.normpath(os.path.join(os.path.dirname(src), path))

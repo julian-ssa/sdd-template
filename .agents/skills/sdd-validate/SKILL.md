@@ -10,7 +10,7 @@ hermano en `../<proyecto>-specs`.
 
 ## Proceso
 
-1. Lee en `../<proyecto>-specs`: `docs/constitution.md`, `specs/NNN-*/spec.md`, `plan.md` y `tasks.md`.
+1. Lee en `../<proyecto>-specs`: [`docs/constitution.md`](../../../docs/constitution.md), `specs/NNN-*/spec.md`, `plan.md` y `tasks.md`.
 2. Ejecuta la suite completa y guarda la salida.
 3. Para **cada RF**, en orden: qué test lo cubre (archivo y nombre; debe contener el
    id `RF-n`), resultado (verde / rojo / sin test). Un RF sin test es un fallo, no
