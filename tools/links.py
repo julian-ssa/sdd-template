@@ -107,8 +107,9 @@ def broken_links(src, text):
             continue
         if fence:
             continue
+        line = re.sub(r"`[^`]*`", "", line)  # los ejemplos en código en línea no son enlaces
         for target in LINK_RE.findall(line):
-            if target.startswith(("http://", "https://", "mailto:")):
+            if target.startswith(("http://", "https://", "mailto:")) or "{{" in target:
                 continue
             if not os.path.exists(os.path.normpath(os.path.join(d, target))):
                 yield n, target
