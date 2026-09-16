@@ -39,12 +39,24 @@ specs, por ejemplo `sdd-plan -> ../../../{{PROYECTO}}-specs/.agents/skills/sdd-p
 ## Documentación actualizada de librerías (Context7)
 
 Usa el servidor MCP Context7 para consultar la documentación de la versión exacta de cada
-librería antes de escribir código que la use. Configuración versionada para Claude Code
-(`.mcp.json`) y Cursor (`.cursor/mcp.json`); ambas leen la clave de la variable de entorno
-`CONTEXT7_API_KEY`, que cada persona define en su shell (`export CONTEXT7_API_KEY=...` en
-`~/.zshrc`), nunca en el repo. Para otras herramientas, añade a tu configuración de usuario un
-servidor MCP llamado `context7` con el comando `npx -y @upstash/context7-mcp --api-key $CONTEXT7_API_KEY`
-(Codex: `~/.codex/config.toml`, sección `[mcp_servers.context7]`; opencode: `opencode.json`, clave `mcp`).
+librería antes de escribir código que la use. La configuración está versionada y usa el
+servidor remoto por HTTP (`https://mcp.context7.com/mcp`), así que no necesita Node ni `npx`
+en la máquina: Claude Code lee `.mcp.json` y Cursor `.cursor/mcp.json`. Ambos toman la clave
+de la variable de entorno `CONTEXT7_API_KEY`; cada persona usa su propia clave (cuenta gratuita
+en context7.com) y nunca se escribe en el repo.
+
+Cómo definir la variable según la máquina:
+- macOS y Linux (incluido el VPS): `export CONTEXT7_API_KEY="..."` en `~/.zshrc` o `~/.bashrc`
+  del usuario que ejecuta el agente; abre una terminal nueva.
+- Windows (PowerShell, una vez): `[Environment]::SetEnvironmentVariable("CONTEXT7_API_KEY", "...", "User")`;
+  abre una terminal nueva. Si usas WSL, defínela dentro de WSL como en Linux.
+- Ejecuciones sin sesión interactiva (VPS, scripts): pásala en el entorno del proceso.
+
+La primera vez que Claude Code abre el repo pide aprobar el servidor del proyecto; para no
+preguntar en cada máquina puede fijarse `"enableAllProjectMcpServers": true` en la configuración
+de usuario de Claude Code. Para otras herramientas, añade un servidor MCP llamado `context7` de
+tipo HTTP con esa URL y la cabecera `Authorization: Bearer <clave>` (Codex: `~/.codex/config.toml`,
+sección `[mcp_servers.context7]`; opencode: `opencode.json`, clave `mcp`).
 
 ## Versiones: siempre la última estable
 
