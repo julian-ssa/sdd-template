@@ -50,7 +50,7 @@ El archivo `<repo-de-codigo>/AGENTS.md` (uno por repo de código) dice que las s
 
 ## Plantilla de repo de código
 
-`templates/code-repo/` contiene la base común de los repos de código (`AGENTS.md` con
+`templates/code-repo/` contiene la base común de los repos de código ([`templates/code-repo/AGENTS.md`](templates/code-repo/AGENTS.md) con
 placeholders, skills SDD enlazadas más `ponytail`, configuración de Context7 para Claude Code y
 Cursor, `.editorconfig` y un `ci.yml` de ejemplo). Instrucciones en su `README.md`.
 

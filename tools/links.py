@@ -19,7 +19,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 
-FILES = subprocess.check_output(["git", "ls-files", "*.md"], text=True).split()
+FILES = [f for f in subprocess.check_output(["git", "ls-files", "*.md"], text=True).split()
+         if not f.startswith("templates/")]  # las plantillas se copian a otros repos: sus rutas no son de este
 ALL = subprocess.check_output(["git", "ls-files"], text=True).split()
 ADRS = {m.group(1): p for p in glob.glob("docs/decisions/ADR-*.md")
         if (m := re.match(r"ADR-(\d{4})", os.path.basename(p)))}
