@@ -15,8 +15,8 @@ autorización explícita del propietario para ese lote; la regla por defecto de 
 
 1. Lee `AGENTS.md` y [`docs/constitution.md`](../../../docs/constitution.md) del repo de specs, el `AGENTS.md` del repo de código,
    `specs/NNN-*/plan.md` y `tasks.md`. El plan debe estar aprobado.
-2. Comprueba que el árbol está limpio y `main` al día: `git status`, `git pull`.
-3. Crea la rama `spec-NNN/Ta-Tb` desde `main`. **Nunca escribas en `main`.**
+2. Comprueba que el árbol está limpio y `develop` al día: `git status`, `git checkout develop`, `git pull`.
+3. Crea la rama `spec-NNN/Ta-Tb` desde `develop` (rama por defecto de los repos de código). **Nunca escribas en `develop` ni en `main`.**
 4. Comprueba que las dependencias de `Ta` están marcadas. Si no, párate.
 
 ## Por cada tarea, en orden
@@ -28,7 +28,8 @@ autorización explícita del propietario para ese lote; la regla por defecto de 
 3. Commit en la rama con el formato `spec NNN Tn (RF-x): <qué>` y push. Espera el resultado de CI
    del commit (`gh run watch` o consulta periódica).
 4. CI en verde: marca la tarea en `tasks.md` del repo de specs (commit y evidencia), haz commit y
-   push de ese cambio en el repo de specs, y pasa a la siguiente.
+   push de ese cambio en el repo de specs (en una rama de ese repo, con su propio pull request
+   contra `main` al final del lote), y pasa a la siguiente.
 5. CI en rojo: analiza y corrige **como máximo dos veces**. Si sigue en rojo, párate.
 
 ## Condiciones de parada (obligatorias)
@@ -43,7 +44,7 @@ Detente, sin marcar la tarea, cuando ocurra cualquiera de estas:
 
 ## Al terminar (por parada o por fin de lote)
 
-1. Abre un **pull request** de la rama contra `main` con este informe:
+1. Abre un **pull request** de la rama contra `develop` con este informe:
    - Tareas completadas, con su commit y la evidencia del "Hecho cuando".
    - Tarea en la que se detuvo y el motivo exacto (salida del test o de CI, decisión que falta).
    - Consultas hechas en Context7 (biblioteca y tema) y dependencias añadidas, con su justificación.
@@ -53,6 +54,6 @@ Detente, sin marcar la tarea, cuando ocurra cualquiera de estas:
 
 ## Prohibido en este modo
 
-Escribir en `main`; marcar tareas sin evidencia; saltar tareas; cambiar la spec, el plan o la
+Escribir en `develop` o en `main`; marcar tareas sin evidencia; saltar tareas; cambiar la spec, el plan o la
 constitución; añadir dependencias sin justificación; ejecutar `[H]` o `[M]` como si fueran `[A]`;
 tocar `.env` con secretos reales; continuar tras una condición de parada.

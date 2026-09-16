@@ -94,6 +94,7 @@ márcala `[H]` o `[M]` y párate.
 6. Toda decisión que cambie el modelo de dominio o los permisos requiere un ADR nuevo, no una edición silenciosa.
 7. Actualiza [`specs/README.md`](specs/README.md) (estado y número de marcadores) cada vez que toques una spec.
 8. **Herramientas obligatorias en todo repo de código, plan y tarea**: Context7 antes de escribir código con cualquier librería (documentación de la versión instalada, nunca de memoria), Ponytail en cada tarea (el mínimo código que funciona; ninguna dependencia sin justificar) e impeccable en toda interfaz. Cada `plan.md` lleva la sección "Herramientas obligatorias del agente" y cada `tasks.md` la tarea transversal TX-3.
+9. **Ramas y pull requests, siempre**: nadie escribe directamente en `main` (este repo) ni en `develop` o `main` (repos de código). Todo cambio va en una rama (`spec-NNN/...`, `chore/...`, `docs/...`) y termina en un pull request que revisa y mezcla el propietario. En los repos de código los PR van contra `develop` (entorno de pruebas) y `develop` pasa a `main` (producción) por un PR de liberación. Detalle en [ADR-0001](docs/decisions/ADR-0001-repositorios.md).
 
 ## Al terminar cualquier tarea
 

@@ -7,8 +7,9 @@ siendo la norma cuando hay una persona delante.
 
 ## Principios
 
-1. **Rama, nunca `main`.** Cada lote trabaja en `spec-NNN/Ta-Tb` y termina en un pull request.
-   `main` solo cambia cuando el propietario mezcla.
+1. **Rama, nunca `develop` ni `main`.** Cada lote trabaja en `spec-NNN/Ta-Tb`, creada desde
+   `develop`, y termina en un pull request contra `develop` (entorno de pruebas). `main` es
+   producción y solo recibe un pull request de `develop` cuando el propietario libera.
 2. **CI es la puerta.** Una tarea cuenta como hecha solo con CI en verde en su commit
    (constitución 10). El agente no mezcla PR.
 3. **Parar es correcto.** Ante un fallo persistente, una tarea `[H]` o `[M]`, un hueco en la spec

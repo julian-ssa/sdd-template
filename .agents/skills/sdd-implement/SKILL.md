@@ -41,6 +41,11 @@ repo de specs clonado como hermano en `../<proyecto>-specs` (si no está, clóna
 
 ## Al terminar
 
+- Todo el trabajo va en una rama `spec-NNN/Tn` creada desde `develop` (repos de código) o desde
+  `main` (repo de specs); nunca escribas directamente en `develop` ni en `main`. Al terminar la
+  tarea, push de la rama y pull request contra `develop` (código) o `main` (specs) con el RF, la
+  evidencia y la consulta de Context7 usada; lo mezcla el propietario.
+
 - Marca `Tn` en `tasks.md` **solo si** su "Hecho cuando" se cumple de forma
   observable (pega la evidencia: salida del test o del comando).
 - Indica qué RF cubre, qué archivos cambiaste y **PÁRATE**. No empieces la siguiente tarea.

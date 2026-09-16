@@ -27,6 +27,11 @@ Estado: propuesta · Fecha: {{FECHA}}
   en `docs/reference/*-contract.md` con el commit leído.
 - El backlog vive en [`docs/product/roadmap.md`](../product/roadmap.md).
 
+## Ramas y entornos
+- Repos de código: `develop` (rama por defecto, entorno de pruebas) y `main` (producción). Nadie escribe directamente en ninguna; el trabajo va en ramas `spec-NNN/...` o `chore/...` y entra en `develop` por pull request mezclado por el propietario; producción se libera con un PR de `develop` a `main`. CI en cada PR y en cada push a ambas.
+- Repo de specs: solo `main`; todo cambio por rama y pull request.
+- La protección técnica de ramas en GitHub requiere el plan Pro en repos privados; hasta entonces, convención escrita en `AGENTS.md`.
+
 ## Consecuencias
 - Despliegue simple: cada repo de código se construye solo, sin credenciales para otro repo.
 - Cambiar una spec es un commit en el repo de specs, sin tocar los repos de código; la
