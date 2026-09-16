@@ -1,0 +1,12 @@
+# Plantilla: sustituye los pasos por los del stack. Debe correr en cada push y pull request.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "{{instalar}} && {{lint}} && {{tipos}} && {{tests}}"
