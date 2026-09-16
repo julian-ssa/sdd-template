@@ -14,6 +14,9 @@ Argumentos: `NNN` (número de spec existente o el siguiente libre) y, opcionalme
 
 ## Antes de empezar
 
+0. `git checkout main && git pull` en el repo de specs y crea una rama (`spec-NNN/...` o `docs/...`);
+   el resultado se entrega como pull request contra `main`, nunca directo.
+
 1. Lee [`AGENTS.md`](../../../AGENTS.md), [`docs/constitution.md`](../../../docs/constitution.md), [`docs/product/glossary.md`](../../../docs/product/glossary.md) y
    [`docs/product/requisitos-transversales.md`](../../../docs/product/requisitos-transversales.md).
 2. Lee las specs previas de `specs/` para respetar convenciones y no contradecir lo acordado.

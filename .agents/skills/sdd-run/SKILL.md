@@ -16,6 +16,7 @@ autorización explícita del propietario para ese lote; la regla por defecto de 
 1. Lee `AGENTS.md` y [`docs/constitution.md`](../../../docs/constitution.md) del repo de specs, el `AGENTS.md` del repo de código,
    `specs/NNN-*/plan.md` y `tasks.md`. El plan debe estar aprobado.
 2. Comprueba que el árbol está limpio y `develop` al día: `git status`, `git checkout develop`, `git pull`.
+   Haz lo mismo en `../<proyecto>-specs` sobre `main`. Si hay cambios sin commit o el pull falla, párate.
 3. Crea la rama `spec-NNN/Ta-Tb` desde `develop` (rama por defecto de los repos de código). **Nunca escribas en `develop` ni en `main`.**
 4. Comprueba que las dependencias de `Ta` están marcadas. Si no, párate.
 

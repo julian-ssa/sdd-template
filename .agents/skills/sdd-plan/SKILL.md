@@ -10,6 +10,9 @@ Argumento: `NNN` (spec con estado `aprobada` y cero marcadores abiertos).
 
 ## Antes de empezar
 
+0. `git checkout main && git pull` en el repo de specs y crea una rama (`spec-NNN/...` o `docs/...`);
+   el resultado se entrega como pull request contra `main`, nunca directo.
+
 1. Lee [`AGENTS.md`](../../../AGENTS.md), [`docs/constitution.md`](../../../docs/constitution.md) y [`docs/decisions/ADR-0002-stack.md`](../../../docs/decisions/ADR-0002-stack.md).
    **Si [ADR-0002](../../../docs/decisions/ADR-0002-stack.md) está `pendiente`, párate** y dilo: sin stack no hay plan.
 2. Lee `specs/NNN-*/spec.md`. Si tiene marcadores `[NECESITA ACLARACIÓN]` o no está
