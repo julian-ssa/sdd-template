@@ -53,6 +53,7 @@ copia el contenido de una skill: `SKILL.md` en `.agents/skills/` es la única fu
 | `sdd-spec` | Spec + clarificación | idea o `NNN` existente; `--aclarar` para el pase de QA | `spec.md`, [`specs/README.md`](../../specs/README.md) |
 | `sdd-plan` | Plan + tareas | `NNN` con spec aprobada; [ADR-0002](../decisions/ADR-0002-stack.md) decidido | `plan.md`, `tasks.md` |
 | `sdd-implement` | Implementación | `NNN Tn` | código + tests; `tasks.md` marcada |
+| `sdd-run` | Lote de tareas sin supervisión | `NNN Ta Tb`; autorización explícita | rama + pull request con informe; ver [`ejecucion-desatendida.md`](ejecucion-desatendida.md) |
 | `sdd-validate` | Validación | `NNN` | informe RF → test → resultado; estado en [`specs/README.md`](../../specs/README.md) |
 | `sdd-change` | Cambio | `NNN` + nuevo requisito | spec actualizada (diff), luego plan/tareas |
 

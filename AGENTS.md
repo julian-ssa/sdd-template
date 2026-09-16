@@ -76,6 +76,7 @@ Fases y skill que las ejecuta (detalle en [`docs/sdd/README.md`](docs/sdd/README
 | Implementación de una tarea | `sdd-implement` | código + tests, en el repo de código |
 | Validación de una spec | `sdd-validate` | veredicto RF por RF |
 | Cambio de requisito | `sdd-change` | spec actualizada primero, luego plan y tareas |
+| Lote de tareas sin supervisión | `sdd-run` | rama `spec-NNN/Ta-Tb` + pull request con informe; solo con autorización del propietario ([`docs/sdd/ejecucion-desatendida.md`](docs/sdd/ejecucion-desatendida.md)) |
 
 ## Recursos externos
 

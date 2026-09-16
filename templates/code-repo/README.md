@@ -6,7 +6,7 @@ Base común de cualquier repo de código que consume un repo de specs SDD como h
 Después, crea los enlaces a las skills SDD (uno por skill, relativos al repo de specs):
 
 ```bash
-for s in sdd-spec sdd-plan sdd-implement sdd-validate sdd-change; do
+for s in sdd-spec sdd-plan sdd-implement sdd-validate sdd-change sdd-run; do
   ln -s ../../../<proyecto>-specs/.agents/skills/$s .agents/skills/$s
 done
 mkdir -p .claude .opencode && ln -s ../.agents/skills .claude/skills && ln -s ../.agents/skills .opencode/skill
