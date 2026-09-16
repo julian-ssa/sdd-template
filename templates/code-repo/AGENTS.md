@@ -69,6 +69,9 @@ para actualizar, y se revisa en cada cambio de dependencias.
 
 ## Reglas
 
+0. **Herramientas obligatorias**: Context7 antes de escribir código con cualquier librería, Ponytail en cada
+   tarea, impeccable en toda interfaz (instálala con `npx impeccable install --project --no-hooks` y muévela a
+   `.agents/skills/`; el binario `scripts/bin/` no se versiona).
 1. Nada se implementa fuera de una tarea de `tasks.md` de la spec activa. Sin plan y tareas
    aprobados, este repo solo recibe infraestructura.
 2. Cada test lleva en su nombre el id del RF que cubre; la suite roja bloquea el merge. CI corre

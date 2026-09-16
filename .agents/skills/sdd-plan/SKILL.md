@@ -28,6 +28,7 @@ Usa [`specs/_templates/plan.md`](../../../specs/_templates/plan.md). Sin código
 - Algoritmos en pseudocódigo, con fecha de valoración explícita y referencia a la fórmula documentada.
 - Decisiones técnicas justificadas, **cada una con la alternativa descartada** y el
   principio o ADR que la respalda.
+- Sección "Herramientas obligatorias del agente": Context7 para cada librería y versión del plan, Ponytail en cada tarea, impeccable en toda interfaz (regla estricta; ver `AGENTS.md`).
 - Estrategia de tests: unitarios de dominio con fechas inyectadas, contratos, golden tests.
 - Tabla de cobertura RF → módulo → test. Ningún RF puede quedar sin fila.
 

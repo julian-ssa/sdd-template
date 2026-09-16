@@ -17,6 +17,9 @@
 ## Decisiones técnicas
 <Cada decisión con su justificación y la alternativa descartada. Cita el principio de la constitución o el ADR que la respalda.>
 
+## Herramientas obligatorias del agente
+<Context7 antes de usar cada librería (lista las librerías y versiones de este plan), Ponytail en cada tarea, impeccable en toda interfaz. Ver `AGENTS.md` del repo de código.>
+
 ## Estrategia de tests
 <Unitarios del dominio con fechas inyectadas, contratos, integración, golden tests. Mapa RF → test.>
 

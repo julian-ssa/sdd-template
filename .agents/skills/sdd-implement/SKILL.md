@@ -10,6 +10,12 @@ repo de specs clonado como hermano en `../<proyecto>-specs` (si no está, clóna
 
 ## Antes de empezar
 
+0. **Herramientas obligatorias**: antes de escribir código que use una librería, consulta su
+   documentación actual en Context7 (`resolve-library-id` y `query-docs` para la versión instalada) y
+   cita en el commit qué consultaste; aplica Ponytail (¿necesita existir?, ¿ya está en el repo?, ¿lo hace
+   la biblioteca estándar?) y no añadas dependencias sin justificarlas; si la tarea es de interfaz, usa
+   impeccable (`shape` antes, `audit` después).
+
 1. Lee en `../<proyecto>-specs`: `AGENTS.md`, [`docs/constitution.md`](../../../docs/constitution.md), `specs/NNN-*/spec.md`,
    `plan.md` y `tasks.md`. Lee el `AGENTS.md` del repo de código, por ejemplo `<repo-de-codigo>/AGENTS.md` (comandos de test, lint, estructura).
 2. Comprueba que todas las tareas de las que depende Tn están marcadas. Si no, párate y dilo.

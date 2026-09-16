@@ -16,3 +16,4 @@
 ## Tareas transversales fijas
 - [ ] TX-1. [A] Todo texto visible pasa por la capa de i18n (RNF-i18n). Hecho cuando: no hay cadenas de UI literales en el código.
 - [ ] TX-2. [A] Cada RF aparece en el nombre o descripción de al menos un test. Hecho cuando: `sdd-validate` no reporta RF sin test.
+- [ ] TX-3. [A] Context7 consultado antes de usar cada librería, Ponytail aplicado en cada tarea, impeccable en cada pantalla. Hecho cuando: cada commit de una tarea cita la consulta de Context7 usada y ninguna dependencia nueva entra sin justificación.
