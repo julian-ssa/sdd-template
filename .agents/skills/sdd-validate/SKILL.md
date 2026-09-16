@@ -11,6 +11,9 @@ hermano en `../<proyecto>-specs`.
 
 ## Proceso
 
+0. `git checkout main && git pull` en el repo de specs y crea una rama; el resultado se entrega
+   como pull request contra `main`, nunca directo.
+
 1. Lee en `../<proyecto>-specs`: [`docs/constitution.md`](../../../docs/constitution.md), `specs/NNN-*/spec.md`, `plan.md` y `tasks.md`.
 2. Ejecuta la suite completa y guarda la salida.
 3. Para **cada RF**, en orden: qué test lo cubre (archivo y nombre; debe contener el

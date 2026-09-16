@@ -72,6 +72,7 @@ para actualizar, y se revisa en cada cambio de dependencias.
 00. **Ramas y pull requests, siempre**: `develop` es la rama por defecto (entorno de pruebas) y `main` es
    producción; nadie escribe directamente en ninguna. Ramas `spec-NNN/...` desde `develop`, pull request contra
    `develop` mezclado por el propietario; producción se libera con un PR de `develop` a `main`.
+   Antes de cualquier cambio: `git status` limpio, `git checkout develop && git pull` y crear la rama desde ahí.
 0. **Herramientas obligatorias**: Context7 antes de escribir código con cualquier librería, Ponytail en cada
    tarea, impeccable en toda interfaz (instálala con `npx impeccable install --project --no-hooks` y muévela a
    `.agents/skills/`; el binario `scripts/bin/` no se versiona).

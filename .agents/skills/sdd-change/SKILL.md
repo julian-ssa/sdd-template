@@ -10,6 +10,9 @@ Argumentos: `NNN` y la descripción del cambio.
 
 ## Proceso
 
+0. `git checkout main && git pull` en el repo de specs y crea una rama; el resultado se entrega
+   como pull request contra `main`, nunca directo.
+
 1. Lee [`AGENTS.md`](../../../AGENTS.md), [`docs/constitution.md`](../../../docs/constitution.md) y `specs/NNN-*/spec.md`.
 2. Si el cambio afecta al modelo de dominio, a la tenencia multi-organización o a la
    visibilidad por rol, **primero** propone un ADR nuevo en `docs/decisions/` y
