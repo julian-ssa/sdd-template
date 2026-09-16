@@ -1,6 +1,7 @@
 ---
 name: sdd-implement
 description: Usa esta skill cuando el usuario pida implementar una tarea concreta (Tn) de specs/NNN-nombre/tasks.md. Implementa SOLO esa tarea, tests primero, ejecuta la suite, marca la casilla únicamente si su "Hecho cuando" se cumple y se detiene. Si la tarea es [H] la devuelve al humano; si es [M] hace la parte del agente y lista lo que falta.
+model: opus
 ---
 
 # sdd-implement - una tarea, tests primero

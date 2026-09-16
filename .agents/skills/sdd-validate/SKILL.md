@@ -1,6 +1,7 @@
 ---
 name: sdd-validate
 description: Usa esta skill cuando el usuario pida validar, auditar o dar el veredicto de una spec implementada. Recorre cada RF, indica qué test lo cubre y su resultado, comprueba los "Se verifica" de la constitución que apliquen y actualiza el estado en specs/README.md.
+model: fable
 ---
 
 # sdd-validate - veredicto RF por RF

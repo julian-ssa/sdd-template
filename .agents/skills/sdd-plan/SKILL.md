@@ -1,6 +1,7 @@
 ---
 name: sdd-plan
 description: Usa esta skill cuando el usuario pida el plan técnico o las tareas de una spec aprobada. Genera specs/NNN-nombre/plan.md y tasks.md en un solo pase, etiquetando cada tarea como [A] agente, [H] humano o [M] mixta, y escribiendo primero los prerrequisitos humanos. Se niega a ejecutarse si la decisión de stack ([ADR-0002](../../../docs/decisions/ADR-0002-stack.md)) sigue pendiente.
+model: fable
 ---
 
 # sdd-plan - plan técnico y tareas

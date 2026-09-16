@@ -1,6 +1,7 @@
 ---
 name: sdd-run
 description: Usa esta skill cuando el usuario pida ejecutar varias tareas seguidas de una spec sin supervisión (por ejemplo "sdd-run 001 T2 T10", "avanza las tareas esta noche", "sigue con el lote"). Recorre las tareas en orden aplicando sdd-implement a cada una, siempre en una rama y nunca en main, con CI en verde como puerta y condiciones de parada estrictas; termina abriendo un pull request con el informe del lote.
+model: opus
 ---
 
 # sdd-run - un lote de tareas, sin supervisión

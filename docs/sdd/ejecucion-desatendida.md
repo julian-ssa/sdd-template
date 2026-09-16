@@ -17,6 +17,20 @@ siendo la norma cuando hay una persona delante.
 4. **Lotes cortos al principio.** Cinco o seis tareas por noche hasta ver cómo se comporta y
    cuánto cuesta en tokens; después, lo que la experiencia aconseje.
 
+## Modelo y esfuerzo (Claude Code)
+
+Reparto decidido por el propietario (2026-09-16) para gastar tokens donde rinden:
+- **Fable 5.1** para pensar y juzgar: `sdd-spec`, `sdd-plan`, `sdd-validate`, `sdd-change` y la
+  revisión de pull requests. Esfuerzo `high`.
+- **Opus 5** para ejecutar: `sdd-implement` y `sdd-run`. Esfuerzo `medium` por defecto; `high`
+  solo en tareas de cifrado, sesiones, migraciones o permisos.
+
+Cómo se aplica: cada skill lleva en su cabecera `model: fable` o `model: opus`, así Claude Code
+cambia de modelo al invocarla aunque la sesión esté en otro. La sesión del servidor arranca con
+`claude --model opus --effort medium` (o con `"model": "opus"` en el `settings.json` del usuario que
+ejecuta el agente); dentro de una sesión, `/model` y `/effort` lo cambian al momento. El campo
+`model:` es una indicación para Claude Code; otras herramientas lo ignoran y eligen su modelo.
+
 ## Cómo lanzarlo
 
 Desde una sesión de Claude Code (u otro agente) **en el VPS**, dentro del repo de código:

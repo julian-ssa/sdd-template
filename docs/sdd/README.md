@@ -37,6 +37,8 @@ plano sin comandos propietarios, así que sirven de tres formas:
 | Codex, Cursor, Gemini CLI, Jules, otros con soporte de skills | Apunta la herramienta a `.agents/skills/` (o crea un enlace simbólico a esa carpeta en la ruta que espere). |
 | Cualquier LLM sin skills (chat web, xAI, API propia) | Pega [`AGENTS.md`](../../AGENTS.md), [`docs/constitution.md`](../constitution.md) y el `SKILL.md` de la fase, o el prompt corto de [`docs/sdd/prompts.md`](prompts.md). |
 
+Cada `SKILL.md` lleva `model: fable` (spec, plan, validación, cambio) o `model: opus` (implementación y lotes): es una indicación para Claude Code, que cambia de modelo al invocar la skill; otras herramientas la ignoran. Detalle y esfuerzo en [`ejecucion-desatendida.md`](ejecucion-desatendida.md).
+
 Adaptadores nuevos: un enlace simbólico por herramienta, añadido aquí. Nunca se
 copia el contenido de una skill: `SKILL.md` en `.agents/skills/` es la única fuente.
 

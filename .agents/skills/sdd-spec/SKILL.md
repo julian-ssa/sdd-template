@@ -1,6 +1,7 @@
 ---
 name: sdd-spec
 description: Usa esta skill cuando el usuario pida crear, redactar, revisar o clarificar la especificación (spec) de una funcionalidad. Guía una entrevista de requisitos y produce o corrige specs/NNN-nombre/spec.md en notación EARS siguiendo la plantilla del repositorio. Con "--aclarar" ejecuta el pase de QA y resuelve los marcadores [NECESITA ACLARACIÓN].
+model: fable
 ---
 
 # sdd-spec - redactar y clarificar una spec
