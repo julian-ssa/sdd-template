@@ -40,9 +40,20 @@ specs, por ejemplo `sdd-plan -> ../../../{{PROYECTO}}-specs/.agents/skills/sdd-p
 
 Usa el servidor MCP Context7 para consultar la documentación de la versión exacta de cada
 librería antes de escribir código que la use. Configuración versionada para Claude Code
-(`.mcp.json`) y Cursor (`.cursor/mcp.json`). Para otras herramientas, añade a tu configuración
-de usuario un servidor MCP llamado `context7` con el comando `npx -y @upstash/context7-mcp`.
-La clave de API es opcional y va en tu entorno local, nunca en el repo.
+(`.mcp.json`) y Cursor (`.cursor/mcp.json`); ambas leen la clave de la variable de entorno
+`CONTEXT7_API_KEY`, que cada persona define en su shell (`export CONTEXT7_API_KEY=...` en
+`~/.zshrc`), nunca en el repo. Para otras herramientas, añade a tu configuración de usuario un
+servidor MCP llamado `context7` con el comando `npx -y @upstash/context7-mcp --api-key $CONTEXT7_API_KEY`
+(Codex: `~/.codex/config.toml`, sección `[mcp_servers.context7]`; opencode: `opencode.json`, clave `mcp`).
+
+## Versiones: siempre la última estable
+
+Regla del propietario (2026-09-16): toda dependencia, imagen base, runtime y acción de CI se
+instala en su **última versión estable**, comprobada en la fuente en el momento de instalarla
+(`npm view <paquete> version` y `dist-tags`, PyPI, Docker Hub, releases de GitHub), nunca de
+memoria. Se descartan versiones candidatas (`rc`, `beta`, `next`). Si una versión no puede
+adoptarse por incompatibilidad con otra dependencia, se anota aquí con el motivo y la condición
+para actualizar, y se revisa en cada cambio de dependencias.
 
 ## Reglas
 
