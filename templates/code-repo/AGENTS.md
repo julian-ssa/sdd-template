@@ -91,3 +91,14 @@ para actualizar, y se revisa en cada cambio de dependencias.
 5. Commits en inglés que citan spec y RF: `spec 001 RF-12: ...`. Sin trailers de atribución.
 6. Al terminar una tarea, marca la casilla en `tasks.md` del repo de specs solo si su
    "Hecho cuando" se cumple, y anota el commit de este repo.
+
+## Economía de contexto (tokens): para toda persona y agente
+
+Cada turno reenvía todo el historial; lo que se lee una vez se paga en cada turno siguiente. Reglas:
+
+- **Modelo y esfuerzo al empezar, nunca a mitad de tarea.** El repo fija por defecto `opus` con esfuerzo `medium` en `.claude/settings.json` (Fable solo lo cargan las skills SDD de diseño: `sdd-spec`, `sdd-plan`, `sdd-validate`, `sdd-change`). Cambiar de modelo a mitad de sesión reprocesa todo el historial sin caché.
+- **Abre la sesión dentro del repo**, no en la carpeta padre del workspace: la caché es por directorio y los ajustes del proyecto solo aplican dentro del repo.
+- **Nunca vuelques archivos grandes al contexto**: casos dorados `docs/reference/golden/*.json` (hasta 180 KB cada uno), exports, volcados, `package-lock`, salidas de `git log -p`. Resume con `jq`, `head`, `wc` o `grep`, o delega la lectura a un subagente y quédate con la conclusión.
+- **Revisar un PR**: primero `gh pr view N --json files`, después el diff por archivo y sin datos: `git diff base...rama -- . ":!docs/reference/golden"`. Los JSON dorados están marcados en `.gitattributes` para no aparecer en los diffs; míralos a propósito con `git diff --text` solo cuando toque.
+- **Compacta en los límites naturales** (`/compact` al cerrar una tarea), no cuando salte la compactación automática a mitad de una.
+- **Comprueba el consumo** con `/usage` (línea "Prompt cache (main)": ratio de aciertos y causa probable del último fallo) y `/context`.

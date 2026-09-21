@@ -102,6 +102,17 @@ márcala `[H]` o `[M]` y párate.
 8. **Herramientas obligatorias en todo repo de código, plan y tarea**: Context7 antes de escribir código con cualquier librería (documentación de la versión instalada, nunca de memoria), Ponytail en cada tarea (el mínimo código que funciona; ninguna dependencia sin justificar) e impeccable en toda interfaz. Cada `plan.md` lleva la sección "Herramientas obligatorias del agente" y cada `tasks.md` la tarea transversal TX-3.
 9. **Ramas y pull requests, siempre**: nadie escribe directamente en `main` (este repo) ni en `develop` o `main` (repos de código). Todo cambio va en una rama (`spec-NNN/...`, `chore/...`, `docs/...`) y termina en un pull request que revisa y mezcla el propietario. En los repos de código los PR van contra `develop` (entorno de pruebas) y `develop` pasa a `main` (producción) por un PR de liberación. **Antes de cualquier cambio**: `git fetch` y `git pull` de la rama base (`main` aquí, `develop` en los repos de código) y crear la rama nueva desde ahí; si hay cambios sin commit o la rama base está por detrás, párate. Detalle en [ADR-0001](docs/decisions/ADR-0001-repositorios.md).
 
+## Economía de contexto (tokens): para toda persona y agente
+
+Cada turno reenvía todo el historial; lo que se lee una vez se paga en cada turno siguiente. Reglas:
+
+- **Modelo y esfuerzo al empezar, nunca a mitad de tarea.** El repo fija por defecto `opus` con esfuerzo `medium` en `.claude/settings.json` (Fable solo lo cargan las skills SDD de diseño: `sdd-spec`, `sdd-plan`, `sdd-validate`, `sdd-change`). Cambiar de modelo a mitad de sesión reprocesa todo el historial sin caché.
+- **Abre la sesión dentro del repo**, no en la carpeta padre del workspace: la caché es por directorio y los ajustes del proyecto solo aplican dentro del repo.
+- **Nunca vuelques archivos grandes al contexto**: casos dorados `docs/reference/golden/*.json` (hasta 180 KB cada uno), exports, volcados, `package-lock`, salidas de `git log -p`. Resume con `jq`, `head`, `wc` o `grep`, o delega la lectura a un subagente y quédate con la conclusión.
+- **Revisar un PR**: primero `gh pr view N --json files`, después el diff por archivo y sin datos: `git diff base...rama -- . ":!docs/reference/golden"`. Los JSON dorados están marcados en `.gitattributes` para no aparecer en los diffs; míralos a propósito con `git diff --text` solo cuando toque.
+- **Compacta en los límites naturales** (`/compact` al cerrar una tarea), no cuando salte la compactación automática a mitad de una.
+- **Comprueba el consumo** con `/usage` (línea "Prompt cache (main)": ratio de aciertos y causa probable del último fallo) y `/context`.
+
 ## Al terminar cualquier tarea
 
 - Ejecuta las comprobaciones de [`docs/sdd/README.md`](docs/sdd/README.md) → "Checklist de calidad" que apliquen.
