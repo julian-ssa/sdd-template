@@ -67,6 +67,12 @@ memoria. Se descartan versiones candidatas (`rc`, `beta`, `next`). Si una versi�
 adoptarse por incompatibilidad con otra dependencia, se anota aquí con el motivo y la condición
 para actualizar, y se revisa en cada cambio de dependencias.
 
+## Reglas de autoría y estilo (para toda persona y agente, en cualquier herramienta)
+
+- Los commits, pull requests y archivos van únicamente a nombre de la persona que los hace. **Nunca** se añaden trailers `Co-Authored-By`, `Claude-Session`, líneas "Generated with Claude Code" ni ninguna otra atribución a una herramienta o modelo. El CI rechaza los commits que las lleven.
+- **Nunca el guion largo** (em dash, U+2014) en ningún texto. Se usa "-". El CI lo comprueba en todo texto propio; queda fuera el texto de terceros vendido tal cual (skills `ponytail` e `impeccable`, bloque que genera Next.js).
+- Estas reglas viven en el repositorio (este archivo, `.claude/settings.json` y el CI) para que apliquen a cualquiera que lo clone, sin depender de configuración local.
+
 ## Reglas
 
 00. **Ramas y pull requests, siempre**: `develop` es la rama por defecto (entorno de pruebas) y `main` es

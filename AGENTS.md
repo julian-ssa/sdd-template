@@ -84,6 +84,12 @@ Registro completo con propietario y si un agente puede usarlo: [`docs/sdd/recurs
 Si una tarea necesita una credencial, cuenta o acceso que no tienes, **no la simules**:
 márcala `[H]` o `[M]` y párate.
 
+## Reglas de autoría y estilo (para toda persona y agente, en cualquier herramienta)
+
+- Los commits, pull requests y archivos van únicamente a nombre de la persona que los hace. **Nunca** se añaden trailers `Co-Authored-By`, `Claude-Session`, líneas "Generated with Claude Code" ni ninguna otra atribución a una herramienta o modelo. El CI rechaza los commits que las lleven.
+- **Nunca el guion largo** (em dash, U+2014) en ningún texto. Se usa "-". El CI lo comprueba en todo texto propio; queda fuera el texto de terceros vendido tal cual (skills `ponytail` e `impeccable`, bloque que genera Next.js).
+- Estas reglas viven en el repositorio (este archivo, `.claude/settings.json` y el CI) para que apliquen a cualquiera que lo clone, sin depender de configuración local.
+
 ## Reglas
 
 1. Lee [`docs/constitution.md`](docs/constitution.md) y la spec activa antes de escribir nada.
