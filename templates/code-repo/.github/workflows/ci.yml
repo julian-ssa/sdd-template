@@ -8,5 +8,13 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: sin atribución ni guion largo (AGENTS.md)
+        run: |
+          base="${{ github.event.pull_request.base.sha || github.event.before }}"
+          if [ -n "$base" ] && git cat-file -e "$base" 2>/dev/null; then range="$base..HEAD"; else range="HEAD~1..HEAD"; fi
+          if git log --format=%B "$range" | grep -iE 'co-authored-by|claude-session|generated with'; then exit 1; fi
+          if git ls-files -z | xargs -0 grep -ln $'\xe2\x80\x94'; then exit 1; fi
       - run: echo "{{instalar}} && {{lint}} && {{tipos}} && {{tests}}"
