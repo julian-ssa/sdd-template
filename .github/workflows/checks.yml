@@ -13,7 +13,7 @@ jobs:
       - run: python3 tools/links.py --check
       - name: sin guion largo
         run: |
-          if git ls-files -z '*.md' '*.txt' '*.json' '*.yml' '*.yaml' '*.py' | xargs -0 grep -ln $'\xe2\x80\x94'; then echo "guion largo encontrado"; exit 1; fi
+          if git ls-files -z | grep -zvE '(^|/)\.agents/skills/(ponytail|impeccable)/|(^|/)\.claude/agents/|\.(png|jpg|ico|woff2?)$' | xargs -0 sed '/BEGIN:nextjs-agent-rules/,/END:nextjs-agent-rules/d' 2>/dev/null | grep -qn $'\xe2\x80\x94'; then echo 'em dash found (outside vendored third-party text)'; exit 1; fi
       - name: sin atribución a herramientas en los commits
         run: |
           base="${{ github.event.pull_request.base.sha || github.event.before }}"
