@@ -1,0 +1,3 @@
+# Large data fixtures stay out of diffs by default so a review (human or agent) does not load
+# hundreds of KB of numbers. Inspect on purpose with `git diff --text` or `jq`.
+docs/reference/golden/*.json -diff linguist-generated=true
