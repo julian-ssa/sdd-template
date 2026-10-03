@@ -20,14 +20,18 @@ siendo la norma cuando hay una persona delante.
 
 ## Modelo y esfuerzo (Claude Code)
 
-Reparto decidido por el propietario (2026-09-16) para gastar tokens donde rinden:
-- **Fable 5.1** para pensar y juzgar: `sdd-spec`, `sdd-plan`, `sdd-validate`, `sdd-change` y la
-  revisión de pull requests. Esfuerzo `high`.
-- **Opus 5** para ejecutar: `sdd-implement` y `sdd-run`. Esfuerzo `medium` por defecto; `high`
-  solo en tareas de cifrado, sesiones, migraciones o permisos.
+Reparto decidido por el propietario (2026-09-16) y revisado el 2026-10-02: **Opus 5.5** para todo.
+- Pensar y juzgar: `sdd-spec`, `sdd-plan`, `sdd-validate`, `sdd-change` y la revisión de pull
+  requests. Esfuerzo `high`.
+- Ejecutar: `sdd-implement` y `sdd-run`. Esfuerzo `medium` por defecto; `high` solo en tareas de
+  cifrado, sesiones, migraciones o permisos.
 
-Cómo se aplica: cada skill lleva en su cabecera `model: fable` o `model: opus`, así Claude Code
-cambia de modelo al invocarla aunque la sesión esté en otro. La sesión del servidor arranca con
+Hasta el 2026-10-02 las skills de diseño usaban Fable 5.1. Se pasaron a Opus 5.5 porque cambiar
+de modelo al invocar una skill invalida la caché de la sesión y Fable agotaba el presupuesto de
+tokens del servidor en minutos.
+
+Cómo se aplica: cada skill lleva en su cabecera `model: opus`, así Claude Code usa ese modelo al
+invocarla aunque la sesión esté en otro. La sesión del servidor arranca con
 `claude --model opus --effort medium` (o con `"model": "opus"` en el `settings.json` del usuario que
 ejecuta el agente); dentro de una sesión, `/model` y `/effort` lo cambian al momento. El campo
 `model:` es una indicación para Claude Code; otras herramientas lo ignoran y eligen su modelo.
