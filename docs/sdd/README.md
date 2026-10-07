@@ -58,6 +58,7 @@ copia el contenido de una skill: `SKILL.md` en `.agents/skills/` es la única fu
 | `sdd-run` | Lote de tareas sin supervisión | `NNN Ta Tb`; autorización explícita | rama + pull request con informe; ver [`ejecucion-desatendida.md`](ejecucion-desatendida.md) |
 | `sdd-validate` | Validación | `NNN` | informe RF → test → resultado; estado en [`specs/README.md`](../../specs/README.md) |
 | `sdd-change` | Cambio | `NNN` + nuevo requisito | spec actualizada (diff), luego plan/tareas |
+| `pr-review` | Revisión independiente de un PR o auditoría del repo, con un modelo distinto del que escribió el código | `PR N, base origin/<rama>` o `auditoría, áreas a a b` | informe con formato fijo, sin tocar archivos; ver [`SKILL.md`](../../.agents/skills/pr-review/SKILL.md) |
 
 ## Checklist de calidad (mecánica)
 

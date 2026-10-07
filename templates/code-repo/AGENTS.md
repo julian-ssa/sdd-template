@@ -32,7 +32,8 @@ y la spec activa.
 ## Skills
 
 `.agents/skills/` contiene las skills SDD (enlaces simbólicos relativos por skill al repo de
-specs, por ejemplo `sdd-plan -> ../../../{{PROYECTO}}-specs/.agents/skills/sdd-plan`) y
+specs, por ejemplo `sdd-plan -> ../../../{{PROYECTO}}-specs/.agents/skills/sdd-plan`; incluye `pr-review`,
+para revisar un PR con otro modelo) y
 `ponytail` (reglas para escribir el mínimo código que funciona; MIT). `.claude/skills` y
 `.opencode/skill` son enlaces a `.agents/skills`.
 
