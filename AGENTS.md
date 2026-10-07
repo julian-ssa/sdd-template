@@ -77,6 +77,7 @@ Fases y skill que las ejecuta (detalle en [`docs/sdd/README.md`](docs/sdd/README
 | Validación de una spec | `sdd-validate` | veredicto RF por RF |
 | Cambio de requisito | `sdd-change` | spec actualizada primero, luego plan y tareas |
 | Lote de tareas sin supervisión | `sdd-run` | rama `spec-NNN/Ta-Tb` + pull request con informe; solo con autorización del propietario ([`docs/sdd/ejecucion-desatendida.md`](docs/sdd/ejecucion-desatendida.md)) |
+| Revisión independiente de un PR o auditoría del repo | `pr-review` | informe sin tocar archivos, con otro modelo (GPT-6.1 Sol, esfuerzo xhigh, en Codex); ver [`.agents/skills/pr-review/SKILL.md`](.agents/skills/pr-review/SKILL.md) |
 
 ## Recursos externos
 
