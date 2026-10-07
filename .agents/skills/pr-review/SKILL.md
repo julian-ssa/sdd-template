@@ -57,7 +57,7 @@ codex exec -p review --sandbox read-only -o ~/review-<N>.md "Usa la skill pr-rev
 
 1. Estado: `git status` (debe estar limpio), `git branch --show-current`, `git rev-parse --short HEAD`.
    En modo PR: `git log --oneline <base>..HEAD` y `git diff --stat <base>...HEAD`.
-2. Contexto, en este orden: `AGENTS.md` del repo; `../{{PROYECTO}}-specs/AGENTS.md`;
+2. Contexto, en este orden: `AGENTS.md` del repo; [`AGENTS.md` del repo de specs](../../../AGENTS.md);
    [`docs/constitution.md`](../../../docs/constitution.md); la spec, el plan y `tasks.md` de las
    tareas que cita la rama o sus commits (`spec NNN Tn`); los ADR que esos documentos citen. Un repo
    sin `AGENTS.md` se rige por el de specs y por su contrato en `docs/reference/`.
